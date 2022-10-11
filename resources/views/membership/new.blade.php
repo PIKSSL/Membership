@@ -1,11 +1,18 @@
+
 <form action="/api/memberships" , method="post">
     {{csrf_field()}}
     {{method_field('POST')}}
-    <label for="establishment">club_id:</label><br>
-    <input type="date" id="establishment" name="establishment" value=""><br>
-    <label for="location">location:</label><br>
-    <input type="text" id="location" name="location" value=""><br><br>
-    <label for="max_number">max_number:</label><br>
-    <input type="number" id="max_number" name="max_number" value=""><br><br>
+    <label for="user_id">user_id:</label>
+    <select id="user_id">
+        @foreach ($users as $user)
+        <option>{{$user->id}}</option>
+        @endforeach
+    </select>
+    <label for="club_id">club_id:</label>
+    <select id="club_id">
+        @foreach ($clubs as $club)
+        <option>{{$club->id}}</option>
+        @endforeach
+    </select>
     <input type="submit" value="Submit">
 </form>

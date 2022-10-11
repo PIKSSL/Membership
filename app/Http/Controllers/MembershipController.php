@@ -42,6 +42,7 @@ class MembershipController extends Controller
     {
         $users = User::all();
         $clubs = Club::all();
+        return view('membership.new', ['users' => $users], ['clubs' => $clubs]);
     }
     public function destroyView()
     {

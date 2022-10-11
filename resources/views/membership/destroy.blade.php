@@ -3,7 +3,7 @@
     {{csrf_field()}}
     {{method_field('DELETE')}}
     <div class="form-group">
-        <input type="submit" value="{{$membership->location}}">
+        <input type="submit" value="{{$membership->id}}">
     </div>
 </form>
 @endforeach

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClubController;
+use App\Http\Controllers\MembershipController;
 use Illuminate\Support\Facades\Route;
 
 /*
